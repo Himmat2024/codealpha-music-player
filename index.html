@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <h2>Hi, I am Himmat Hekmatullah</h2>
+      <p>
+        A passionate IT enthusiast who enjoys building useful and interactive web applications. I'm committed to continuous learning and aspire to grow as a system engineer with a focus on Linux. This smart music player is one of the many projects I'm proud of, built using HTML, CSS, and JavaScript during my internship journey.
+      </p>
+      <p>Connect with me on 
+        <a href="https://www.linkedin.com/in/hekmatullahhimmat/" target="_blank">LinkedIn</a>.
+      </p>
+    </div>
+
+    <div class="player">
+      <h2 id="title">Title</h2>
+      <p id="artist">Artist</p>
+      <audio id="audio"></audio>
+
+      <div class="controls">
+        <button onclick="prevSong()">⏮️</button>
+        <button onclick="togglePlay()" id="playBtn">▶️</button>
+        <button onclick="nextSong()">⏭️</button>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <input 
+        type="range" 
+        id="volume" 
+        class="volume" 
+        min="0" max="1" step="0.01" 
+        onchange="setVolume(this.value)"
+      />
+
+      <ul id="playlist"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

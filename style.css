@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.intro {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: white;
+  padding: 25px;
+  max-width: 400px;
+  flex: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.intro a {
+  color: #00e6e6;
+  text-decoration: underline;
+}
+
+.player {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  flex: 1;
+}
+
+.controls button {
+  margin: 10px;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%;
+  background: #eee;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.controls button:hover {
+  background: #ddd;
+}
+
+.progress-container {
+  width: 100%;
+  background: #ddd;
+  height: 8px;
+  margin: 15px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.progress {
+  height: 100%;
+  background: #4caf50;
+  width: 0%;
+  border-radius: 5px;
+}
+
+.volume {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#playlist {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#playlist li {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#playlist li.active {
+  background: #4caf50;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro,
+  .player {
+    width: 90%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .controls button {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+  .player {
+    padding: 20px;
+  }
+
+  .intro {
+    padding: 20px;
+  }
+
+  .progress-container {
+    height: 6px;
+  }
+
+  .volume {
+    margin-top: 8px;
+  }
+}
